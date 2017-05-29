@@ -1,0 +1,14 @@
+name = "Text-CaboCha"
+# badges = ["travis"]
+authority = "cpan:CODEHEX"
+
+module_maker = "ModuleBuild"
+
+c_source = ["src"]
+
+[build]
+build_class = "builder::CaboCha"
+
+[XSUtil]
+cc_warnings = 1
+generate_ppport_h = "src/ppport.h"
