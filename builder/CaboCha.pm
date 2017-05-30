@@ -24,9 +24,9 @@ sub new {
     $class->define_symbols($config);
     $class->gen_const;
 
-    $args{include_dirs}         = [$config->{include}];
-    $args{extra_compiler_flags} = [$config->{cflags}];
-    # $args{extra_linker_flags}   = [$config->{libs}];
+    $args{include_dirs}         = $config->{include};
+    $args{extra_compiler_flags} = $config->{cflags};
+    $args{extra_linker_flags}   = $config->{libs};
     
     return $class->SUPER::new(%args);
 }

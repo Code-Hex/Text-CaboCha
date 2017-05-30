@@ -10,5 +10,6 @@ c_source = ["src"]
 build_class = "builder::CaboCha"
 
 [XSUtil]
+needs_compiler_cpp = 1
 cc_warnings = 1
 generate_ppport_h = "src/ppport.h"

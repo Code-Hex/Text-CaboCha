@@ -53,7 +53,7 @@ my %args = (
 
 
     needs_compiler_c99 => 0,
-    needs_compiler_cpp => 0,
+    needs_compiler_cpp => 1,
     generate_ppport_h => 'src/ppport.h',
     generate_xshelper_h => '0',
     cc_warnings => 1,

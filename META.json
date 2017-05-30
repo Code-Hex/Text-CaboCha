@@ -54,6 +54,17 @@
       }
    },
    "release_status" : "unstable",
+   "resources" : {
+      "bugtracker" : {
+         "web" : "https://github.com/Code-Hex/Text-CaboCha/issues"
+      },
+      "homepage" : "https://github.com/Code-Hex/Text-CaboCha",
+      "repository" : {
+         "type" : "git",
+         "url" : "git://github.com/Code-Hex/Text-CaboCha.git",
+         "web" : "https://github.com/Code-Hex/Text-CaboCha"
+      }
+   },
    "version" : "0.01",
    "x_authority" : "cpan:CODEHEX",
    "x_serialization_backend" : "JSON::PP version 2.27300_01"

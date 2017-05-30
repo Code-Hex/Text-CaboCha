@@ -9,9 +9,27 @@ our $VERSION = "0.01";
 use XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);
 
+my %BOOLEAN_OPTIONS = (
+    map { $_ => 'bool' } qw/--version --help/
+);
+
 sub new {
-    my $self = shift;
-    hello();
+    my $class = shift;
+    my %args = ref $_[0] eq 'HASH' ? %{$_[0]} : @_;
+
+    my @args = ('perl-TextCaboCha');
+    while (my ($key, $value) = each %args) {
+        $key =~ s/_/-/g;
+        $key =~ s/^/--/;
+
+        if (exists $BOOLEAN_OPTIONS{$key}) {
+            push @args, $key;
+        } else {
+            push @args, join('=', $key, $value);
+        }
+    }
+
+    $class->_xs_create(\@args);
 }
 
 1;
