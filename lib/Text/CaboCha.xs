@@ -111,6 +111,13 @@ TextCaboCha__xs_create(SV *class_sv, AV *args = NULL)
 TextCaboCha_Tree *
 TextCaboCha_parse(TextCaboCha *cabocha, char *string)
 
+const char *
+TextCaboCha_version()
+    CODE:
+        RETVAL = CaboCha::Parser::version();
+    OUTPUT:
+        RETVAL
+
 MODULE = Text::CaboCha    PACKAGE = Text::CaboCha::Tree    PREFIX = TextCaboCha_Tree_
 
 PROTOTYPES: DISABLE
