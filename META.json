@@ -49,7 +49,9 @@
       },
       "test" : {
          "requires" : {
-            "Test::More" : "0"
+            "Test::LeakTrace" : "0",
+            "Test::More" : "0",
+            "Test::Valgrind" : "0"
          }
       }
    },

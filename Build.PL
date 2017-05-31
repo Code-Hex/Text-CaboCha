@@ -37,7 +37,9 @@ my %args = (
     },
 
     test_requires => {
+        'Test::LeakTrace' => '0',
         'Test::More' => '0',
+        'Test::Valgrind' => '0',
     },
 
     name            => 'Text-CaboCha',
