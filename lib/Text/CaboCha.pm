@@ -93,60 +93,103 @@ Text::CaboCha - Alternate Interface To libcabocha
 
 =head1 DESCRIPTION
 
-This module was created with reference to Text::MeCab.
+This module was created with reference to Text::MeCab.  
 Text::CaboCha gives you a more natural, Perl-ish way to access libcabocha!
 
 =head1 METHODS
+
 =head2 new HASHREF | LIST
 Creates a new Text::CaboCha instance.
 You can either specify a hashref and use named parameters, or you can use the
 exact command line arguments that the cabocha command accepts.
 Below is the list of accepted named options. See the man page for cabocha for 
 details about each option.
+
 =over 4
+
 =item B<output-format>
+
 =item B<input-layer>
+
 =item B<output-layer>
+
 =item B<ne>
+
 =item B<parser-model>
+
 =item B<chunker-model>
+
 =item B<ne-model>
+
 =item B<posset>
+
 =item B<charset>
+
 =item B<charset-file>
+
 =item B<rcfile>
+
 =item B<mecabrc>
+
 =item B<mecab-dicdir>
+
 =item B<mecab-userdic>
+
 =item B<output>
+
 =back
+
 =head2 $tree = $parser-E<gt>parse(SCALAR)
 Parses the given text via CaboCha::Parser, and returns a Text::CaboCha::Tree object.
+
 =head2 $version = Text::CaboCha::version()
 The version number, as returned by libcabocha's CaboCha::Parser::version()
+
 =head2 CONSTANTS
+
 =over 4
+
 =item ENCODING
+
   my $encoding = Text::CaboCha::ENCODING
+
 Returns the encoding of the underlying cabocha library that was detected at
 compile time.
+
 =item CABOCHA_VERSION
+
 The version number, same as Text::CaboCha::version().
+
 =item CABOCHA_TARGET_VERSION
+
 The version number detected at compile time of Text::CaboCha. 
+
 =item CABOCHA_TARGET_MAJOR_VERSION
+
 The version number detected at compile time of Text::CaboCha. 
+
 =item CABOCHA_TARGET_MINOR_VERSION
+
 The version number detected at compile time of Text::CaboCha. 
+
 =item CABOCHA_CONFIG
+
 Path to cabocha-config, if available.
+
 =item CABOCHA_FORMAT_TREE
+
 =item CABOCHA_FORMAT_LATTICE
+
 =item CABOCHA_FORMAT_TREE_LATTICE
+
 =item CABOCHA_FORMAT_XML
+
 =item CABOCHA_FORMAT_CONLL
+
 =item CABOCHA_FORMAT_NONE
+
 =back
+
 =head1 SEE ALSO
 https://taku910.github.io/cabocha/
 

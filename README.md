@@ -54,61 +54,77 @@ Text::CaboCha - Alternate Interface To libcabocha
 
 # DESCRIPTION
 
-This module was created with reference to Text::MeCab.
+This module was created with reference to Text::MeCab.  
 Text::CaboCha gives you a more natural, Perl-ish way to access libcabocha!
 
 # METHODS
-=head2 new HASHREF | LIST
+
+## new HASHREF | LIST
 Creates a new Text::CaboCha instance.
 You can either specify a hashref and use named parameters, or you can use the
 exact command line arguments that the cabocha command accepts.
 Below is the list of accepted named options. See the man page for cabocha for 
 details about each option.
-=over 4
-=item **output-format**
-=item **input-layer**
-=item **output-layer**
-=item **ne**
-=item **parser-model**
-=item **chunker-model**
-=item **ne-model**
-=item **posset**
-=item **charset**
-=item **charset-file**
-=item **rcfile**
-=item **mecabrc**
-=item **mecab-dicdir**
-=item **mecab-userdic**
-=item **output**
-=back
-=head2 $tree = $parser->parse(SCALAR)
+
+- **output-format**
+- **input-layer**
+- **output-layer**
+- **ne**
+- **parser-model**
+- **chunker-model**
+- **ne-model**
+- **posset**
+- **charset**
+- **charset-file**
+- **rcfile**
+- **mecabrc**
+- **mecab-dicdir**
+- **mecab-userdic**
+- **output**
+
+## $tree = $parser->parse(SCALAR)
 Parses the given text via CaboCha::Parser, and returns a Text::CaboCha::Tree object.
-=head2 $version = Text::CaboCha::version()
+
+## $version = Text::CaboCha::version()
 The version number, as returned by libcabocha's CaboCha::Parser::version()
-=head2 CONSTANTS
-=over 4
-=item ENCODING
-  my $encoding = Text::CaboCha::ENCODING
-Returns the encoding of the underlying cabocha library that was detected at
-compile time.
-=item CABOCHA\_VERSION
-The version number, same as Text::CaboCha::version().
-=item CABOCHA\_TARGET\_VERSION
-The version number detected at compile time of Text::CaboCha. 
-=item CABOCHA\_TARGET\_MAJOR\_VERSION
-The version number detected at compile time of Text::CaboCha. 
-=item CABOCHA\_TARGET\_MINOR\_VERSION
-The version number detected at compile time of Text::CaboCha. 
-=item CABOCHA\_CONFIG
-Path to cabocha-config, if available.
-=item CABOCHA\_FORMAT\_TREE
-=item CABOCHA\_FORMAT\_LATTICE
-=item CABOCHA\_FORMAT\_TREE\_LATTICE
-=item CABOCHA\_FORMAT\_XML
-=item CABOCHA\_FORMAT\_CONLL
-=item CABOCHA\_FORMAT\_NONE
-=back
-=head1 SEE ALSO
+
+## CONSTANTS
+
+- ENCODING
+
+        my $encoding = Text::CaboCha::ENCODING
+
+    Returns the encoding of the underlying cabocha library that was detected at
+    compile time.
+
+- CABOCHA\_VERSION
+
+    The version number, same as Text::CaboCha::version().
+
+- CABOCHA\_TARGET\_VERSION
+
+    The version number detected at compile time of Text::CaboCha. 
+
+- CABOCHA\_TARGET\_MAJOR\_VERSION
+
+    The version number detected at compile time of Text::CaboCha. 
+
+- CABOCHA\_TARGET\_MINOR\_VERSION
+
+    The version number detected at compile time of Text::CaboCha. 
+
+- CABOCHA\_CONFIG
+
+    Path to cabocha-config, if available.
+
+- CABOCHA\_FORMAT\_TREE
+- CABOCHA\_FORMAT\_LATTICE
+- CABOCHA\_FORMAT\_TREE\_LATTICE
+- CABOCHA\_FORMAT\_XML
+- CABOCHA\_FORMAT\_CONLL
+- CABOCHA\_FORMAT\_NONE
+
+# SEE ALSO
 https://taku910.github.io/cabocha/
 
 # LICENSE
