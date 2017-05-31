@@ -2,9 +2,9 @@ TYPEMAP
 TextCaboCha*              T_CABOCHA
 TextCaboCha_Tree*         T_CABOCHA_TREE
 TextCaboCha_Token*        T_CABOCHA_TOKEN
-TextCaboCha_Token const*  T_CABOCHA_TOKEN
+const TextCaboCha_Token*  T_CABOCHA_TOKEN
 TextCaboCha_Chunk*        T_CABOCHA_CHUNK
-TextCaboCha_Chunk const*  T_CABOCHA_CHUNK
+const TextCaboCha_Chunk*  T_CABOCHA_CHUNK
 const char **             T_PTROBJ
 
 INPUT
@@ -20,13 +20,13 @@ T_CABOCHA
     
 INPUT
 T_CABOCHA_TREE
-        $var = XS_STATE(TextCaboCha_Tree *, $arg);
+    $var = XS_STATE(TextCaboCha_Tree *, $arg);
 
 T_CABOCHA_TOKEN
-        $var = XS_STATE(TextCaboCha_Token *, $arg);
+    $var = XS_STATE(TextCaboCha_Token *, $arg);
 
 T_CABOCHA_CHUNK
-        $var = XS_STATE(TextCaboCha_Chunk *, $arg);
+    $var = XS_STATE(TextCaboCha_Chunk *, $arg);
 
 OUTPUT
 T_CABOCHA

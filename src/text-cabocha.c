@@ -44,8 +44,8 @@ TextCaboCha_create(char **argv, unsigned int argc)
         Newxz( cabocha->argv, argc, char *);
         for (i = 0; i < argc; i++) {
             int len = strlen(argv[i]) + 1;
-            Newxz( cabocha->argv[i], len, char );
-            Copy( argv[i], cabocha->argv[i], len, char );
+            Newxz(cabocha->argv[i], len, char);
+            Copy(argv[i], cabocha->argv[i], len, char);
         }
     }
     return cabocha;

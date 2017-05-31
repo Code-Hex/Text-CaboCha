@@ -44,7 +44,7 @@ typedef struct {
     unsigned int argc;
 } TextCaboCha;
 
-typedef cabocha_tree_t TextCaboCha_Tree;
+typedef cabocha_tree_t  TextCaboCha_Tree;
 typedef cabocha_token_t TextCaboCha_Token;
 typedef cabocha_chunk_t TextCaboCha_Chunk;
 
@@ -59,10 +59,11 @@ TextCaboCha_Tree *TextCaboCha_parse(TextCaboCha *cabocha, char *string);
 /* Text::CaboCha::Tree */
 size_t TextCaboCha_Tree_size(TextCaboCha_Tree *tree);
 size_t TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree);
-TextCaboCha_Token const *TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size);
+const TextCaboCha_Token *TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size);
 size_t TextCaboCha_Tree_chunk_size(TextCaboCha_Tree *tree);
-TextCaboCha_Chunk const *TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size);
+const TextCaboCha_Chunk *TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size);
 const char *TextCaboCha_Tree_tostr(TextCaboCha_Tree *tree, unsigned int format);
+
 /* Text::CaboCha::Token */
 
 #define CABOCHA_TOKEN_SURFACE(x)            x ? x->surface            : NULL

@@ -121,13 +121,13 @@ TextCaboCha_Tree_size(TextCaboCha_Tree *tree)
 size_t
 TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree)
 
-TextCaboCha_Token const *
+const TextCaboCha_Token *
 TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size)
 
 size_t
 TextCaboCha_Tree_chunk_size(TextCaboCha_Tree *tree)
 
-TextCaboCha_Chunk const *
+const TextCaboCha_Chunk *
 TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size)
 
 const char *

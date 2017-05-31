@@ -14,7 +14,7 @@ TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree)
     return cabocha_tree_token_size(tree);
 }
 
-TextCaboCha_Token const *
+const TextCaboCha_Token *
 TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size)
 {
     return cabocha_tree_token(tree, size);
@@ -26,7 +26,7 @@ TextCaboCha_Tree_chunk_size(TextCaboCha_Tree *tree)
     return cabocha_tree_chunk_size(tree);
 }
 
-TextCaboCha_Chunk const *
+const TextCaboCha_Chunk *
 TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size)
 {
     return cabocha_tree_chunk(tree, size);
