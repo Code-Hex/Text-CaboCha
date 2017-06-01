@@ -57,12 +57,21 @@ Text::CaboCha - Alternate Interface To libcabocha
 This module was created with reference to Text::MeCab.  
 Text::CaboCha gives you a more natural, Perl-ish way to access libcabocha!
 
+# PERFORMANCE
+
+You can get to the result of running eg/benchmark.pl.
+
+                   Rate      cabocha text_cabocha
+    cabocha      16.8/s           --         -28%
+    text_cabocha 23.2/s          39%           --
+
 # METHODS
 
 ## new HASHREF | LIST
-Creates a new Text::CaboCha instance.
+
+Creates a new Text::CaboCha instance.  
 You can either specify a hashref and use named parameters, or you can use the
-exact command line arguments that the cabocha command accepts.
+exact command line arguments that the cabocha command accepts.  
 Below is the list of accepted named options. See the man page for cabocha for 
 details about each option.
 
