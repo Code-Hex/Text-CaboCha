@@ -22,10 +22,10 @@ TextCaboCha_mg_find(pTHX_ SV* const sv, const MGVTBL* const vtbl){
 static int
 TextCaboCha_mg_free(pTHX_ SV *const sv, MAGIC* const mg)
 {
-    TextCaboCha* const cabocha = (TextCaboCha*)mg->mg_ptr;
+    TextCaboCha * const cabocha = (TextCaboCha *)mg->mg_ptr;
 
     PERL_UNUSED_VAR(sv);
-    cabocha_destroy(XS_2CABOCHA(cabocha));
+    delete XS_2CABOCHA(cabocha);
     if (cabocha->argc > 0) {
         unsigned int i;
         for (i = 0; i < cabocha->argc; i++) {
@@ -40,13 +40,13 @@ static int
 TextCaboCha_mg_dup(pTHX_ MAGIC *const mg, CLONE_PARAMS *const param)
 {
 #ifdef USE_ITHREADS
-    TextCaboCha* const cabocha = (TextCaboCha*)mg->mg_ptr;
+    TextCaboCha* const cabocha = (TextCaboCha *)mg->mg_ptr;
     TextCaboCha* newcabocha;
 
     PERL_UNUSED_VAR(param);
 
     newcabocha = TextCaboCha_create(cabocha->argv, cabocha->argc);
-    mg->mg_ptr = (char *)newcabocha;
+    mg->mg_ptr = newcabocha;
 #else
     PERL_UNUSED_VAR(mg);
     PERL_UNUSED_VAR(param);

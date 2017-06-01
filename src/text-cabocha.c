@@ -19,7 +19,7 @@ TextCaboCha *
 TextCaboCha_create(char **argv, unsigned int argc)
 {
     TextCaboCha *cabocha;
-    cabocha_t *parser;
+    CaboCha::Parser *parser;
 #if TEXT_CABOCHA_DEBUG
     {
         unsigned int i;
@@ -31,7 +31,7 @@ TextCaboCha_create(char **argv, unsigned int argc)
     }
 #endif
 
-    parser = cabocha_new(argc, argv);
+    parser = CaboCha::createParser(argc, argv);
     if (parser == NULL) {
         return NULL;
     }
@@ -41,7 +41,7 @@ TextCaboCha_create(char **argv, unsigned int argc)
     cabocha->argc  = argc;
     if (argc > 0) {
         unsigned int i;
-        Newxz( cabocha->argv, argc, char *);
+        Newxz(cabocha->argv, argc, char *);
         for (i = 0; i < argc; i++) {
             int len = strlen(argv[i]) + 1;
             Newxz(cabocha->argv[i], len, char);
@@ -79,7 +79,7 @@ TextCaboCha_create_from_av(AV *av)
         if (argc > 0) {
             Safefree(argv);
         }
-        croak("Failed to create cabocha instance");
+        croak("Failed to create cabocha instance: %s", CaboCha::getParserError());
     }
 
     if (argc > 0) {
@@ -94,11 +94,10 @@ TextCaboCha_parse(TextCaboCha *cabocha, char *string)
 {
     TextCaboCha_Tree *tree;
 
-    tree = (TextCaboCha_Tree *)cabocha_sparse_totree(XS_2CABOCHA(cabocha), string);
+    tree = (TextCaboCha_Tree *)XS_2CABOCHA(cabocha)->parse(string);
     if (tree == NULL) {
-        croak("cabocha_sparse_totree() failed: %s", cabocha_strerror(XS_2CABOCHA(cabocha)));
+        croak("CaboCha::Parser->parse(str) failed: %s", XS_2CABOCHA(cabocha)->what());
     }
-
     return tree;
 }
 

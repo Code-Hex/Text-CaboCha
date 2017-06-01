@@ -39,12 +39,12 @@ extern "C" {
     }
 
 typedef struct {
-    cabocha_t *cabocha;
+    CaboCha::Parser *cabocha;
     char **argv;
     unsigned int argc;
 } TextCaboCha;
 
-typedef cabocha_tree_t  TextCaboCha_Tree;
+typedef CaboCha::Tree   TextCaboCha_Tree;
 typedef cabocha_token_t TextCaboCha_Token;
 typedef cabocha_chunk_t TextCaboCha_Chunk;
 
@@ -104,6 +104,6 @@ size_t TextCaboCha_Chunk_token_pos(TextCaboCha_Chunk *chunk);
 float TextCaboCha_Chunk_score(TextCaboCha_Chunk *chunk);
 const char **TextCaboCha_Chunk_feature_list(TextCaboCha_Chunk *chunk);
 const char *TextCaboCha_Chunk_additional_info(TextCaboCha_Chunk *chunk);
-unsigned short TextCaboCha_Chunk_list_size(TextCaboCha_Chunk *chunk);
+unsigned short int TextCaboCha_Chunk_list_size(TextCaboCha_Chunk *chunk);
 
 #endif /* __TEXT_CABOCHA_H__ */

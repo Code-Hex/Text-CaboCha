@@ -5,37 +5,37 @@
 size_t
 TextCaboCha_Tree_size(TextCaboCha_Tree *tree)
 {
-    return cabocha_tree_size(tree);
+    return tree->size();
 }
 
 size_t
 TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree)
 {
-    return cabocha_tree_token_size(tree);
+    return tree->token_size();
 }
 
 const TextCaboCha_Token *
 TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size)
 {
-    return cabocha_tree_token(tree, size);
+    return tree->token(size);
 }
 
 size_t
 TextCaboCha_Tree_chunk_size(TextCaboCha_Tree *tree)
 {
-    return cabocha_tree_chunk_size(tree);
+    return tree->chunk_size();
 }
 
 const TextCaboCha_Chunk *
 TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size)
 {
-    return cabocha_tree_chunk(tree, size);
+    return tree->chunk(size);
 }
 
 const char *
 TextCaboCha_Tree_tostr(TextCaboCha_Tree *tree, unsigned int format)
 {
-    return cabocha_tree_tostr(tree, format);
+    return tree->toString(static_cast<CaboCha::FormatType>(format));
 }
 
 #endif /* __TEXT_CABOCHA_TREE_C__ */

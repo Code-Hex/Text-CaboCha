@@ -50,7 +50,7 @@ TextCaboCha_Chunk_additional_info(TextCaboCha_Chunk *chunk)
     return CABOCHA_CHUNK_ADDITIONAL_INFO(chunk);
 }
 
-unsigned short
+unsigned short int
 TextCaboCha_Chunk_list_size(TextCaboCha_Chunk *chunk)
 {
     return CABOCHA_CHUNK_FEATURE_LIST_SIZE(chunk);
