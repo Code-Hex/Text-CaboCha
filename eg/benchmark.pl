@@ -44,7 +44,22 @@ sub text_cabocha {
     }
 }
 
+sub text_cabocha_each {
+    my $cabocha = Text::CaboCha->new;
+    my $tree = $cabocha->parse($text);
+
+    my $token_size = $tree->token_size;
+    for my $token (@{ $tree->tokens }) {
+        if ($token->chunk) {
+            for my $field (@fields) {
+                $token->chunk->$field();
+            }
+        }
+    }
+}
+
 cmpthese(100, {
     cabocha => \&cabocha,
     text_cabocha => \&text_cabocha,
+    text_cabocha_each => \&text_cabocha_each
 });

@@ -100,9 +100,10 @@ Text::CaboCha gives you a more natural, Perl-ish way to access libcabocha!
 
 You can get to the result of running eg/benchmark.pl.
 
-                   Rate      cabocha text_cabocha
-    cabocha      16.8/s           --         -28%
-    text_cabocha 23.2/s          39%           --
+                        Rate           cabocha      text_cabocha text_cabocha_each
+    cabocha           17.2/s                --              -27%              -29%
+    text_cabocha      23.5/s               36%                --               -3%
+    text_cabocha_each 24.2/s               40%                3%                --
 
 =head1 METHODS
 
