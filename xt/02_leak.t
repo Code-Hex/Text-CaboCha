@@ -108,4 +108,47 @@ subtest "CaboCha->tree->token" => sub {
     }
 };
 
+subtest "Cabocha->tree->chunks" => sub {
+    my @fields = qw(
+        link
+        head_pos
+        func_pos
+        token_size
+        token_pos
+        score
+        feature_list
+        additional_info
+        list_size
+    );
+
+    no_leaks_ok {
+        for my $chunk (@{ $tree->chunks }) {
+            for my $field (@fields) {
+                $chunk->$field;
+            }
+        }
+    }, "Detected memory leak. when using tree->chunks";
+};
+
+subtest "Cabocha->tree->chunks" => sub {
+    my @fields = qw(
+        surface
+        normalized_surface
+        feature
+        feature_list
+        feature_list_size
+        ne
+        additional_info
+        chunk
+    );
+
+    no_leaks_ok {
+        for my $token (@{ $tree->tokens }) {
+            for my $field (@fields) {
+                $token->$field;
+            }
+        }
+    }, "Detected memory leak. when using tree->tokens";
+};
+
 done_testing;
