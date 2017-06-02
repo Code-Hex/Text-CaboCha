@@ -128,6 +128,9 @@ TextCaboCha_Tree_size(TextCaboCha_Tree *tree)
 size_t
 TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree)
 
+SV *
+TextCaboCha_Tree_tokens(TextCaboCha_Tree *tree)
+
 const TextCaboCha_Token *
 TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size)
 
@@ -153,7 +156,7 @@ TextCaboCha_Token_normalized_surface(TextCaboCha_Token *token)
 const char *
 TextCaboCha_Token_feature(TextCaboCha_Token *token)
 
-const char **
+SV *
 TextCaboCha_Token_feature_list(TextCaboCha_Token *token)
 
 unsigned short
@@ -190,7 +193,7 @@ TextCaboCha_Chunk_token_pos(TextCaboCha_Chunk *chunk)
 float
 TextCaboCha_Chunk_score(TextCaboCha_Chunk *chunk)
 
-const char **
+SV *
 TextCaboCha_Chunk_feature_list(TextCaboCha_Chunk *chunk)
 
 const char *

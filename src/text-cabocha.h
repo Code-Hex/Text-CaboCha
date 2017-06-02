@@ -24,6 +24,9 @@ extern "C" {
 #define NEED_sv_2pv_flags
 #define NEED_newSVpvn_flags
 
+#define TEXT_CABOCHA_TOKEN_KLASS "Text::CaboCha::Token"
+#define TEXT_CABOCHA_CHUNK_KLASS "Text::CaboCha::Chunk"
+
 #ifndef TEXT_CABOCHA_DEBUG
 #define TEXT_CABOCHA_DEBUG 0
 #endif
@@ -59,6 +62,7 @@ TextCaboCha_Tree *TextCaboCha_parse(TextCaboCha *cabocha, char *string);
 /* Text::CaboCha::Tree */
 size_t TextCaboCha_Tree_size(TextCaboCha_Tree *tree);
 size_t TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree);
+SV *TextCaboCha_Tree_tokens(TextCaboCha_Tree *tree);
 const TextCaboCha_Token *TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size);
 size_t TextCaboCha_Tree_chunk_size(TextCaboCha_Tree *tree);
 const TextCaboCha_Chunk *TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size);
@@ -78,7 +82,7 @@ const char *TextCaboCha_Tree_tostr(TextCaboCha_Tree *tree, unsigned int format);
 const char *TextCaboCha_Token_surface(TextCaboCha_Token *token);
 const char *TextCaboCha_Token_normalized_surface(TextCaboCha_Token *token);
 const char *TextCaboCha_Token_feature(TextCaboCha_Token *token);
-const char **TextCaboCha_Token_feature_list(TextCaboCha_Token *token);
+SV *TextCaboCha_Token_feature_list(TextCaboCha_Token *token);
 unsigned short TextCaboCha_Token_feature_list_size(TextCaboCha_Token *token);
 const char *TextCaboCha_Token_ne(TextCaboCha_Token *token);
 const char *TextCaboCha_Token_additional_info(TextCaboCha_Token *token);
@@ -102,7 +106,7 @@ size_t TextCaboCha_Chunk_func_pos(TextCaboCha_Chunk *chunk);
 size_t TextCaboCha_Chunk_token_size(TextCaboCha_Chunk *chunk);
 size_t TextCaboCha_Chunk_token_pos(TextCaboCha_Chunk *chunk);
 float TextCaboCha_Chunk_score(TextCaboCha_Chunk *chunk);
-const char **TextCaboCha_Chunk_feature_list(TextCaboCha_Chunk *chunk);
+SV *TextCaboCha_Chunk_feature_list(TextCaboCha_Chunk *chunk);
 const char *TextCaboCha_Chunk_additional_info(TextCaboCha_Chunk *chunk);
 unsigned short int TextCaboCha_Chunk_list_size(TextCaboCha_Chunk *chunk);
 

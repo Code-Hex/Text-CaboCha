@@ -20,10 +20,17 @@ TextCaboCha_Token_feature(TextCaboCha_Token *token)
     return CABOCHA_TOKEN_FEATURE(token);
 }
 
-const char **
+SV *
 TextCaboCha_Token_feature_list(TextCaboCha_Token *token)
 {
-    return CABOCHA_TOKEN_FEATURE_LIST(token);
+    const char ** feature_list;
+    feature_list = CABOCHA_TOKEN_FEATURE_LIST(token);
+    AV* ary = newAV();
+    while (feature_list && (*feature_list) != 0) {
+        av_push(ary, newSVpv(*feature_list, 0));
+        feature_list++;
+    }
+    return newRV_noinc((SV *)ary);
 }
 
 unsigned short

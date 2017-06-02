@@ -38,10 +38,17 @@ TextCaboCha_Chunk_score(TextCaboCha_Chunk *chunk)
     return CABOCHA_CHUNK_SCORE(chunk);
 }
 
-const char **
+SV *
 TextCaboCha_Chunk_feature_list(TextCaboCha_Chunk *chunk)
 {
-    return CABOCHA_CHUNK_FEATURE_LIST(chunk);
+    const char ** feature_list;
+    feature_list = CABOCHA_CHUNK_FEATURE_LIST(chunk);
+    AV* ary = newAV();
+    while (feature_list && (*feature_list) != 0) {
+        av_push(ary, newSVpv(*feature_list, 0));
+        feature_list++;
+    }
+    return newRV_noinc((SV *)ary);
 }
 
 const char *
@@ -55,4 +62,5 @@ TextCaboCha_Chunk_list_size(TextCaboCha_Chunk *chunk)
 {
     return CABOCHA_CHUNK_FEATURE_LIST_SIZE(chunk);
 }
+
 #endif /* __TEXT_CABOCHA_CHUNK_C__ */

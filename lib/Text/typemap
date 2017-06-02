@@ -62,13 +62,13 @@ T_CABOCHA_TREE
     XS_STRUCT2OBJ($arg, "Text::CaboCha::Tree", $var);
 
 T_CABOCHA_TOKEN
-    XS_STRUCT2OBJ($arg, "Text::CaboCha::Token", $var);
+    XS_STRUCT2OBJ($arg, TEXT_CABOCHA_TOKEN_KLASS, $var);
 
 T_CONST_CABOCHA_TOKEN
-    XS_STRUCT2OBJ($arg, "Text::CaboCha::Token", $var);
+    XS_STRUCT2OBJ($arg, TEXT_CABOCHA_TOKEN_KLASS, $var);
 
 T_CABOCHA_CHUNK
-    XS_STRUCT2OBJ($arg, "Text::CaboCha::Chunk", $var);
+    XS_STRUCT2OBJ($arg, TEXT_CABOCHA_CHUNK_KLASS, $var);
 
 T_CONST_CABOCHA_CHUNK
-    XS_STRUCT2OBJ($arg, "Text::CaboCha::Chunk", $var);
+    XS_STRUCT2OBJ($arg, TEXT_CABOCHA_CHUNK_KLASS, $var);
