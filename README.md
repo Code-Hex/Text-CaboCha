@@ -93,9 +93,11 @@ details about each option.
 - **output**
 
 ## $tree = $parser->parse(SCALAR)
+
 Parses the given text via CaboCha::Parser, and returns a Text::CaboCha::Tree object.
 
 ## $version = Text::CaboCha::version()
+
 The version number, as returned by libcabocha's CaboCha::Parser::version()
 
 ## CONSTANTS
