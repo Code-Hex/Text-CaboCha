@@ -185,22 +185,11 @@ The version number detected at compile time of Text::CaboCha.
 
 Path to cabocha-config, if available.
 
-=item CABOCHA_FORMAT_TREE
-
-=item CABOCHA_FORMAT_LATTICE
-
-=item CABOCHA_FORMAT_TREE_LATTICE
-
-=item CABOCHA_FORMAT_XML
-
-=item CABOCHA_FORMAT_CONLL
-
-=item CABOCHA_FORMAT_NONE
-
 =back
 
 =head1 SEE ALSO
-https://taku910.github.io/cabocha/
+https://taku910.github.io/cabocha/  
+L<Text::CaboCha|Text::CaboCha>
 
 =head1 LICENSE
 
@@ -212,6 +201,7 @@ See http://www.perl.com/perl/misc/Artistic.html
 
 =head1 AUTHOR
 
-Kei Kamikawa E<lt>x00.x7f@gmail.comE<gt>
+Kei Kamikawa E<lt>x00.x7f@gmail.comE<gt>  
 L<@codehex|https://twitter.com/CodeHex>
+
 =cut

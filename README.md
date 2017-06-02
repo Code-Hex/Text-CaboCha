@@ -126,15 +126,9 @@ The version number, as returned by libcabocha's CaboCha::Parser::version()
 
     Path to cabocha-config, if available.
 
-- CABOCHA\_FORMAT\_TREE
-- CABOCHA\_FORMAT\_LATTICE
-- CABOCHA\_FORMAT\_TREE\_LATTICE
-- CABOCHA\_FORMAT\_XML
-- CABOCHA\_FORMAT\_CONLL
-- CABOCHA\_FORMAT\_NONE
-
 # SEE ALSO
-https://taku910.github.io/cabocha/
+https://taku910.github.io/cabocha/  
+[Text::CaboCha](https://metacpan.org/pod/Text::CaboCha)
 
 # LICENSE
 
@@ -146,5 +140,5 @@ See http://www.perl.com/perl/misc/Artistic.html
 
 # AUTHOR
 
-Kei Kamikawa <x00.x7f@gmail.com>
+Kei Kamikawa <x00.x7f@gmail.com>  
 [@codehex](https://twitter.com/CodeHex)
