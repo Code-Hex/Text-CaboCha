@@ -56,17 +56,29 @@ You can follow below format.
 
 =head2 $tree_size = $tree->size;
 
+It will return size of tree.
+
 =head2 $token_size = $tree->token_size;
+
+It will return size of token.
 
 =head2 $chunk_size = $tree->chunk_size;
 
+It will return size of chunk.
+
 =head2 my $token = $tree->token($i :Int);
+
+It will return Text::CaboCha::Token object.
 
 =head2 my $chunk = $tree->chunk($i :Int);
 
+It will return Text::CaboCha::Chunk object.
+
 =head1 SEE ALSO
 
-L<Text::CaboCha|Text::CaboCha>
+L<Text::CaboCha|Text::CaboCha>  
+L<Text::CaboCha::Token|Text::CaboCha::Token>  
+L<Text::CaboCha::Chunk|Text::CaboCha::Chunk>
 
 =head1 LICENSE
 
