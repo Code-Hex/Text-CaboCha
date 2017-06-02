@@ -2,6 +2,10 @@ Revision history for Perl extension Text-CaboCha
 
 {{$NEXT}}
 
+0.02 2017-06-02T16:08:15Z
+
+    - Fixed a pod document
+
 0.01 2017-06-02T15:56:01Z
 
     - original version

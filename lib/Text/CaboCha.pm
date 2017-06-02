@@ -3,7 +3,7 @@ use strict;
 use warnings;
 
 our @ISA;
-our $VERSION = "0.01";
+our $VERSION = "0.02";
 
 use XSLoader;
 XSLoader::load(__PACKAGE__, $VERSION);
