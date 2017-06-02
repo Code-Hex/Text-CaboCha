@@ -24,7 +24,6 @@ my %args = (
 
     requires => {
         'Devel::CheckLib' => '0',
-        'perl' => '5.008001',
     },
 
     recommends => {

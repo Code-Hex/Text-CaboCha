@@ -63,6 +63,7 @@ TextCaboCha_Tree *TextCaboCha_parse(TextCaboCha *cabocha, char *string);
 size_t TextCaboCha_Tree_size(TextCaboCha_Tree *tree);
 size_t TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree);
 SV *TextCaboCha_Tree_tokens(TextCaboCha_Tree *tree);
+SV *TextCaboCha_Tree_chunks(TextCaboCha_Tree *tree);
 const TextCaboCha_Token *TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size);
 size_t TextCaboCha_Tree_chunk_size(TextCaboCha_Tree *tree);
 const TextCaboCha_Chunk *TextCaboCha_Tree_chunk(TextCaboCha_Tree *tree, size_t size);

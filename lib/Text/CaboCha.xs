@@ -131,6 +131,9 @@ TextCaboCha_Tree_token_size(TextCaboCha_Tree *tree)
 SV *
 TextCaboCha_Tree_tokens(TextCaboCha_Tree *tree)
 
+SV *
+TextCaboCha_Tree_chunks(TextCaboCha_Tree *tree)
+
 const TextCaboCha_Token *
 TextCaboCha_Tree_token(TextCaboCha_Tree *tree, size_t size)
 

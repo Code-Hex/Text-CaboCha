@@ -57,7 +57,7 @@ TextCaboCha_Tree_chunks(TextCaboCha_Tree *tree)
         SV *chunk;
         chunk = newSViv(PTR2IV(tree->chunk(i)));
         chunk = newRV_noinc(chunk);
-        sv_bless(chunk, gv_stashpv(TEXT_CABOCHA_TOKEN_KLASS, 1));
+        sv_bless(chunk, gv_stashpv(TEXT_CABOCHA_CHUNK_KLASS, 1));
         SvREADONLY_on(chunk);
         av_push(ary, chunk);
     }

@@ -43,8 +43,7 @@
       },
       "runtime" : {
          "requires" : {
-            "Devel::CheckLib" : "0",
-            "perl" : "5.008001"
+            "Devel::CheckLib" : "0"
          }
       },
       "test" : {

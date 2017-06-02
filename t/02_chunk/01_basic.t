@@ -30,6 +30,9 @@ for (my $i = 0; $i < $chunk_size; $i++) {
         }
         ok(!$@, "chunk->$field is not ok (" . (defined $p ? 
             encode_utf8(decode(Text::CaboCha::ENCODING, $p)) : "null") . ")");
+        if ($field eq 'feature_list') {
+            ok(ref $p eq 'ARRAY', "chunk->feature_list is not ARRAYREF");
+        }
     }
 }
 

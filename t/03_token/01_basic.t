@@ -25,8 +25,14 @@ for (my $i = 0; $i < $token_size; $i++) {
     if ($token->chunk) {
         for my $field (@fields) {
             my $p = eval { $token->$field };
+            if ($@) {
+                diag($@);
+            }
             ok(!$@, "token->$field is not ok (" . (defined $p ? 
                 encode_utf8(decode(Text::CaboCha::ENCODING, $p)) : "null") . ")");
+            if ($field eq 'feature_list') {
+                ok(ref $p eq 'ARRAY', "token->feature_list is not ARRAYREF");
+            }
         }
     }
 }
