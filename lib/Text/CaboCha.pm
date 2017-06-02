@@ -149,9 +149,11 @@ details about each option.
 =back
 
 =head2 $tree = $parser-E<gt>parse(SCALAR)
+
 Parses the given text via CaboCha::Parser, and returns a Text::CaboCha::Tree object.
 
 =head2 $version = Text::CaboCha::version()
+
 The version number, as returned by libcabocha's CaboCha::Parser::version()
 
 =head2 CONSTANTS
