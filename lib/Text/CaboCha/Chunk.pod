@@ -32,7 +32,7 @@ Text::CaboCha::Chunk - CaboCha Chunk Object
     $chunk->token_size;
     $chunk->token_pos;
     $chunk->score;
-    $chunk->feature_list;
+    $chunk->feature_list; # array reference
     $chunk->additional_info;
     $chunk->feature_list_size;
 

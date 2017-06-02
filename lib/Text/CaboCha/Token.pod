@@ -20,7 +20,7 @@ Text::CaboCha::Token - CaboCha Token Object
     $token->surface;
     $token->normalized_surface;
     $token->feature;
-    $token->feature_list;
+    $token->feature_list; # array reference
     $token->feature_list_size;
     $token->ne;
     $token->additional_info;

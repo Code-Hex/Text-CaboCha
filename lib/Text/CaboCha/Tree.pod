@@ -14,15 +14,27 @@ Text::CaboCha::Tree - CaboCha Tree Object
 
     $tree->size;
     
+    # Way to get token - (1)
     my $token_size = $tree->token_size;
     for (my $i = 0; $i < $token_size; $i++) {
         my $token = $tree->token($i);
         # do something
     }
 
+    # Way to get token - (2)
+    foreach my $token (@{ $tree->tokens }) {
+        # do something
+    }
+
+    # Way to get chunk - (1)
     my $chunk_size = $tree->chunk_size;
     for (my $i = 0; $i < $chunk_size; $i++) {
         my $chunk = $tree->chunk($i);
+        # do something
+    }
+
+    # Way to get chunk - (2)
+    foreach my $chunk (@{ $tree->chunks }) {
         # do something
     }
 
@@ -57,6 +69,14 @@ You can follow below format.
 =head2 $tree_size = $tree->size;
 
 It will return size of tree.
+
+=head2 $tokens = $tree->tokens;
+
+It will return array reference of Text::CaboCha::Token object.
+
+=head2 $chunks = $tree->chunks;
+
+It will return array reference of Text::CaboCha::Chunk object.
 
 =head2 $token_size = $tree->token_size;
 
