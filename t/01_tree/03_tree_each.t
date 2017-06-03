@@ -1,6 +1,7 @@
 use strict;
 use Test::More;
 use Encode;
+use utf8;
 BEGIN { use_ok("Text::CaboCha") }
 
 my $data = encode(Text::CaboCha::ENCODING, "太郎は次郎が持っている本を花子に渡した。");
