@@ -30,8 +30,10 @@ MYMETA.*
 
 /Text-CaboCha-*
 lib/Text/CaboCha.c
-!lib/Text/ppport.h
 
 .gitignore
 .DS_Store
 .vstags
+
+src/config-const.h
+src/ppport.h
