@@ -44,20 +44,20 @@ Text::CaboCha - Alternate Interface To libcabocha
 
     use Text::CaboCha;
     my $cabocha = Text::CaboCha->new({
-        output-format => $output_format,
-        input-layer   => $input_layer,
-        output-layer  => $output-layer,
+        output_format => $output_format,
+        input_layer   => $input_layer,
+        output_layer  => $output_layer,
         ne            => $ne,
-        parser-model  => $parser_model_file,
-        chunker-model => $chunker_model_file,
-        ne-model      => $ne_tagger_model_file,
+        parser_model  => $parser_model_file,
+        chunker_model => $chunker_model_file,
+        ne_model      => $ne_tagger_model_file,
         posset        => $posset,
         charset       => $encode,
-        charset-file  => $charset_file,
+        charset_file  => $charset_file,
         rcfile        => $cabocha_rc_file,
         mecabrc       => $mecab_rc_file,
-        mecab-dicdir  => $mecab_dicdir,
-        mecab-userdic => $mecab_userdic,
+        mecab_dicdir  => $mecab_dicdir,
+        mecab_userdic => $mecab_userdic,
         output        => $output_file
     });
 
@@ -116,33 +116,33 @@ details about each option.
 
 =over 4
 
-=item B<output-format>
+=item B<output_format>
 
-=item B<input-layer>
+=item B<input_layer>
 
-=item B<output-layer>
+=item B<output_layer>
 
 =item B<ne>
 
-=item B<parser-model>
+=item B<parser_model>
 
-=item B<chunker-model>
+=item B<chunker_model>
 
-=item B<ne-model>
+=item B<ne_model>
 
 =item B<posset>
 
 =item B<charset>
 
-=item B<charset-file>
+=item B<charset_file>
 
 =item B<rcfile>
 
 =item B<mecabrc>
 
-=item B<mecab-dicdir>
+=item B<mecab_dicdir>
 
-=item B<mecab-userdic>
+=item B<mecab_userdic>
 
 =item B<output>
 
