@@ -6,20 +6,20 @@ Text::CaboCha - Alternate Interface To libcabocha
 
     use Text::CaboCha;
     my $cabocha = Text::CaboCha->new({
-        output-format => $output_format,
-        input-layer   => $input_layer,
-        output-layer  => $output-layer,
+        output_format => $output_format,
+        input_layer   => $input_layer,
+        output_layer  => $output_layer,
         ne            => $ne,
-        parser-model  => $parser_model_file,
-        chunker-model => $chunker_model_file,
-        ne-model      => $ne_tagger_model_file,
+        parser_model  => $parser_model_file,
+        chunker_model => $chunker_model_file,
+        ne_model      => $ne_tagger_model_file,
         posset        => $posset,
         charset       => $encode,
-        charset-file  => $charset_file,
+        charset_file  => $charset_file,
         rcfile        => $cabocha_rc_file,
         mecabrc       => $mecab_rc_file,
-        mecab-dicdir  => $mecab_dicdir,
-        mecab-userdic => $mecab_userdic,
+        mecab_dicdir  => $mecab_dicdir,
+        mecab_userdic => $mecab_userdic,
         output        => $output_file
     });
 
@@ -76,20 +76,20 @@ exact command line arguments that the cabocha command accepts.
 Below is the list of accepted named options. See the man page for cabocha for 
 details about each option.
 
-- **output-format**
-- **input-layer**
-- **output-layer**
+- **output\_format**
+- **input\_layer**
+- **output\_layer**
 - **ne**
-- **parser-model**
-- **chunker-model**
-- **ne-model**
+- **parser\_model**
+- **chunker\_model**
+- **ne\_model**
 - **posset**
 - **charset**
-- **charset-file**
+- **charset\_file**
 - **rcfile**
 - **mecabrc**
-- **mecab-dicdir**
-- **mecab-userdic**
+- **mecab\_dicdir**
+- **mecab\_userdic**
 - **output**
 
 ## $tree = $parser->parse(SCALAR)
