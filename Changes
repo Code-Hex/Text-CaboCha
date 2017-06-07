@@ -2,6 +2,10 @@ Revision history for Perl extension Text-CaboCha
 
 {{$NEXT}}
 
+0.04 2017-06-07T10:08:30Z
+
+    - Added new method "$parser->parse_from_node(Text::MeCab::Node)"
+
 0.03 2017-06-03T02:26:29Z
 
     - Patched some issues by skaji.

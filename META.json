@@ -66,7 +66,7 @@
          "web" : "https://github.com/Code-Hex/Text-CaboCha"
       }
    },
-   "version" : "0.03",
+   "version" : "0.04",
    "x_authority" : "cpan:CODEHEX",
    "x_contributors" : [
       "Shoichi Kaji <skaji@cpan.org>",
