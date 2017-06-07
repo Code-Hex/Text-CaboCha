@@ -9,7 +9,7 @@ my $cabocha = Text::CaboCha->new;
 my $tree = $cabocha->parse($text);
 
 # Print tree
-$tree->tostr(Text::CaboCha::CABOCHA_FORMAT_TREE);
+print $tree->tostr(Text::CaboCha::CABOCHA_FORMAT_TREE), "\n";
 
 my $token_size = $tree->token_size;
 my $cid = 0;
