@@ -51,6 +51,8 @@ typedef CaboCha::Tree   TextCaboCha_Tree;
 typedef cabocha_token_t TextCaboCha_Token;
 typedef cabocha_chunk_t TextCaboCha_Chunk;
 
+typedef mecab_node_t TextMeCab_Node;
+
 #define XS_2CABOCHA(x) x->cabocha
 
 /* Text::CaboCha */
@@ -58,6 +60,7 @@ void TextCaboCha_bootstrap();
 TextCaboCha *TextCaboCha_create(char **argv, unsigned int argc);
 TextCaboCha *TextCaboCha_create_from_av(AV *av);
 TextCaboCha_Tree *TextCaboCha_parse(TextCaboCha *cabocha, char *string);
+TextCaboCha_Tree *TextCaboCha_parse_from_node(TextCaboCha *cabocha, const TextMeCab_Node *node);
 
 /* Text::CaboCha::Tree */
 size_t TextCaboCha_Tree_size(TextCaboCha_Tree *tree);

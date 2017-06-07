@@ -61,7 +61,7 @@ Text::CaboCha - Alternate Interface To libcabocha
         output        => $output_file
     });
 
-    my tree = $cabocha->parse($text);
+    my $tree = $cabocha->parse($text);
     $tree->tostr(Text::CaboCha::CABOCHA_FORMAT_TREE); # You can check the tree.
 
     my $token_size = $tree->token_size;
@@ -151,6 +151,10 @@ details about each option.
 =head2 $tree = $parser-E<gt>parse(SCALAR)
 
 Parses the given text via CaboCha::Parser, and returns a Text::CaboCha::Tree object.
+
+=head2 $tree = $parser->parse_from_node(Text::MeCab::Node)
+
+Parses the given L<Text::MeCab::Node|Text::MeCab::Node> via CaboCha::Parser, and returns a Text::CaboCha::Tree object.
 
 =head2 $version = Text::CaboCha::version()
 

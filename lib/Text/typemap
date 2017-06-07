@@ -5,6 +5,7 @@ TextCaboCha_Token*        T_CABOCHA_TOKEN
 const TextCaboCha_Token*  T_CONST_CABOCHA_TOKEN
 TextCaboCha_Chunk*        T_CABOCHA_CHUNK
 const TextCaboCha_Chunk*  T_CONST_CABOCHA_CHUNK
+const TextMeCab_Node*     T_MECAB_NODE
 const char **             T_PTROBJ
 unsigned short int        T_UV
 
@@ -34,6 +35,9 @@ T_CABOCHA_CHUNK
 
 T_CONST_CABOCHA_CHUNK
     $var = XS_STATE(const TextCaboCha_Chunk *, $arg);
+
+T_MECAB_NODE
+    $var = XS_STATE(TextMeCab_Node *, $arg);
 
 OUTPUT
 T_CABOCHA

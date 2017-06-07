@@ -101,5 +101,19 @@ TextCaboCha_parse(TextCaboCha *cabocha, char *string)
     return tree;
 }
 
+TextCaboCha_Tree *
+TextCaboCha_parse_from_node(TextCaboCha *cabocha, const TextMeCab_Node *node)
+{
+    if (node == NULL) {
+        croak("Text::MeCab::Node is null");
+    }
+
+    CaboCha::Tree *t = new CaboCha::Tree;
+    if (!t->read(node)) {
+        croak("CaboCha::Parser->parse_from_node(Text::MeCab::Node) failed: %s", XS_2CABOCHA(cabocha)->what());
+    }
+
+    return (TextCaboCha_Tree *)XS_2CABOCHA(cabocha)->parse(t);
+}
 
 #endif /* __TEXT_CABOCHA_C__ */

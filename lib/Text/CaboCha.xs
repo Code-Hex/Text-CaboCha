@@ -111,6 +111,9 @@ TextCaboCha__xs_create(SV *class_sv, AV *args = NULL)
 TextCaboCha_Tree *
 TextCaboCha_parse(TextCaboCha *cabocha, char *string)
 
+TextCaboCha_Tree *
+TextCaboCha_parse_from_node(TextCaboCha *cabocha, const TextMeCab_Node *node)
+
 const char *
 TextCaboCha_version()
     CODE:
