@@ -11,6 +11,5 @@ on 'test' => sub {
 
 on 'develop' => sub {
     requires 'Test::LeakTrace';
-    requires 'Test::Requires';
     requires 'Test::Valgrind';
 };
